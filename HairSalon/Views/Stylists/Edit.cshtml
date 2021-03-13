@@ -10,10 +10,21 @@
 
 @using (Html.BeginForm())
 {
+  @Html.ValidationSummary(true, "", new { @class = "text-danger" })
   @Html.HiddenFor(model => model.StylistId)
 
   @Html.LabelFor(model => model.StylistName)
   @Html.EditorFor(model => model.StylistName)
+
+  @Html.LabelFor(model => model.StylistPhone)
+  @Html.EditorFor(model => model.StylistPhone)
+
+  @Html.LabelFor(model => model.StylistEmail)
+  @Html.EditorFor(model => model.StylistEmail)
+  @Html.ValidationMessageFor(model => model.StylistEmail, "", new { @class = "text-danger" })
+
+  @Html.LabelFor(model => model.StylistBio)
+  @Html.TextAreaFor(model => model.StylistBio)
 
   <input type="submit" value="Save" />
 }

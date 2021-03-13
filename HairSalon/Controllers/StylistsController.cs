@@ -45,13 +45,13 @@ namespace HairSalon.Controllers
       return View(thisStylist);
     }
 
-    // [HttpPost]
-    // public ActionResult Edit(Stylist stylist)
-    // {
-    //   _db.Entry(stylist).State = EntityState.Modified;
-    //   _db.SaveChanges();
-    //   return RedirectToAction("Index");
-    // }
+    [HttpPost]
+    public ActionResult Edit(Stylist stylist)
+    {
+      _db.Entry(stylist).State = EntityState.Modified;
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
 
   }
 }

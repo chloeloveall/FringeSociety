@@ -7,6 +7,9 @@
 <h2>Stylist Details</h2>
 <hr />
 <h3>@Html.DisplayNameFor(model => model.StylistName): @Html.DisplayFor(model => model.StylistName)<h3>
+<p>@Html.DisplayFor(model => model.StylistPhone)</p>
+<p>@Html.DisplayFor(model => model.StylistEmail)</p>
+<p>@Html.DisplayFor(model => model.StylistBio)</p>
 <p>@Html.ActionLink("Edit Stylist", "Edit", new { id = Model.StylistId })</p>
 <p>@Html.ActionLink("Delete Stylist", "Delete", new { id = Model.StylistId })</p>
 <p>@Html.ActionLink("Back to list", "Index")</p>

@@ -28,9 +28,13 @@ namespace HairSalon.Controllers
     [HttpPost]
     public ActionResult Create(Stylist stylist)
     {
-      _db.Stylists.Add(stylist);
-      _db.SaveChanges();
-      return RedirectToAction("Index");
+      if (ModelState.IsValid)
+      {
+        _db.Stylists.Add(stylist);
+        _db.SaveChanges();
+        return RedirectToAction("Index");
+      }
+      return View(stylist);
     }
 
     public ActionResult Details(int id)
@@ -48,9 +52,13 @@ namespace HairSalon.Controllers
     [HttpPost]
     public ActionResult Edit(Stylist stylist)
     {
-      _db.Entry(stylist).State = EntityState.Modified;
-      _db.SaveChanges();
-      return RedirectToAction("Index");
+      if (ModelState.IsValid)
+      {
+        _db.Entry(stylist).State = EntityState.Modified;
+        _db.SaveChanges();
+        return RedirectToAction("Index");
+      }
+      return View(stylist);
     }
 
     public ActionResult Delete(int id)

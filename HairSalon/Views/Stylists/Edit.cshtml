@@ -15,9 +15,11 @@
 
   @Html.LabelFor(model => model.StylistName)
   @Html.EditorFor(model => model.StylistName)
+  @Html.ValidationMessageFor(model => model.StylistName, "", new { @class = "text-danger" })
 
   @Html.LabelFor(model => model.StylistPhone)
   @Html.EditorFor(model => model.StylistPhone)
+  @Html.ValidationMessageFor(model => model.StylistPhone, "", new { @class = "text-danger" })
 
   @Html.LabelFor(model => model.StylistEmail)
   @Html.EditorFor(model => model.StylistEmail)
@@ -25,6 +27,7 @@
 
   @Html.LabelFor(model => model.StylistBio)
   @Html.TextAreaFor(model => model.StylistBio)
+  @Html.ValidationMessageFor(model => model.StylistBio, "", new { @class = "text-danger" })
 
   @Html.LabelFor(model => model.Specialty)
   <span> Hair Stylist </span> @Html.RadioButtonFor(model => model.Specialty, "Cuts")
@@ -32,6 +35,7 @@
   <span> Barber </span> @Html.RadioButtonFor(model => model.Specialty, "Barber")
   <span> Esthetician </span> @Html.RadioButtonFor(model => model.Specialty, "Esthetician")
   <span> Nail Tech </span> @Html.RadioButtonFor(model => model.Specialty, "Nail Tech")
+  @Html.ValidationMessageFor(model => model.Specialty, "", new { @class = "text-danger" })
 
   <input type="submit" value="Save" />
 }

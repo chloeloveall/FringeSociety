@@ -2,6 +2,7 @@
   Layout = "_Layout";
 }
 
+@using HairSalon.Models
 @model HairSalon.Models.Client
 
 <h2>Edit</h2>
@@ -28,7 +29,9 @@
   @Html.TextBoxFor(model => model.ClientCity)
 
   @Html.LabelFor(model => model.ClientState)
-  @Html.TextBoxFor(model => model.ClientState)
+  @Html.DropDownListFor(model => model.ClientState, 
+    new SelectList(Enum.GetValues(typeof(ClientState))),
+    "Select State")
 
   @Html.LabelFor(model => model.ClientZip)
   @Html.TextBoxFor(model => model.ClientZip)

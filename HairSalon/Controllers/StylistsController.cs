@@ -1,6 +1,7 @@
 using HairSalon.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -30,6 +31,8 @@ namespace HairSalon.Controllers
     {
       if (ModelState.IsValid)
       {
+        DateTime now = DateTime.Now;
+        stylist.HireDate = now;
         _db.Stylists.Add(stylist);
         _db.SaveChanges();
         return RedirectToAction("Index");

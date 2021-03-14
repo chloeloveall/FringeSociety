@@ -17,6 +17,7 @@ namespace HairSalon.Models
     [EmailAddress]
     public string StylistEmail { get; set; }
     public string StylistBio { get; set; }
+    public string Specialty { get; set; }
     public DateTime HireDate { get; set; }
     public virtual ICollection<Client> Clients { get; set; }
   }

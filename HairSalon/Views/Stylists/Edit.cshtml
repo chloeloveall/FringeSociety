@@ -26,6 +26,13 @@
   @Html.LabelFor(model => model.StylistBio)
   @Html.TextAreaFor(model => model.StylistBio)
 
+  @Html.LabelFor(model => model.Specialty)
+  <span> Hair Stylist </span> @Html.RadioButtonFor(model => model.Specialty, "Cuts")
+  <span> Hair Colorist </span> @Html.RadioButtonFor(model => model.Specialty, "Color")
+  <span> Barber </span> @Html.RadioButtonFor(model => model.Specialty, "Barber")
+  <span> Esthetician </span> @Html.RadioButtonFor(model => model.Specialty, "Esthetician")
+  <span> Nail Tech </span> @Html.RadioButtonFor(model => model.Specialty, "Nail Tech")
+
   <input type="submit" value="Save" />
 }
 <p>@Html.ActionLink("Back to list", "Index")</p>

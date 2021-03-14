@@ -7,6 +7,14 @@
 <h2>Client Details</h2>
 <hr />
 <h3>@Html.DisplayNameFor(model => model.ClientName): @Html.DisplayFor(model => model.ClientName)<h3>
+<p>@Html.DisplayNameFor(model => model.ClientPhone): @Html.DisplayFor(model => model.ClientPhone)</p>
+<p>@Html.DisplayNameFor(model => model.ClientEmail): @Html.DisplayFor(model => model.ClientEmail)</p>
+<p>@Html.DisplayNameFor(model => model.ClientAddress): @Html.DisplayFor(model => model.ClientAddress)</p>
+<p>@Html.DisplayNameFor(model => model.ClientCity): @Html.DisplayFor(model => model.ClientCity)</p>
+<p>@Html.DisplayNameFor(model => model.ClientState): @Html.DisplayFor(model => model.ClientState)</p>
+<p>@Html.DisplayNameFor(model => model.ClientZip): @Html.DisplayFor(model => model.ClientZip)</p>
+
+
 <p>@Html.ActionLink("Edit Client", "Edit", new { id = Model.ClientId })</p>
 <p>@Html.ActionLink("Delete Client", "Delete", new { id = Model.ClientId })</p>
 <p>@Html.ActionLink("Back to client list", "Index")</p>

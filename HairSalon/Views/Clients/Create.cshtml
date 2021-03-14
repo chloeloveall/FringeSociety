@@ -2,6 +2,7 @@
   Layout = "_Layout";
 }
 
+@using HairSalon.Models
 @model HairSalon.Models.Client
 
 <h4>Add a new client</h4>
@@ -10,6 +11,26 @@
 {
   @Html.LabelFor(model => model.ClientName)
   @Html.TextBoxFor(model => model.ClientName)
+
+  @Html.LabelFor(model => model.ClientPhone)
+  @Html.TextBoxFor(model => model.ClientPhone)
+
+  @Html.LabelFor(model => model.ClientEmail)
+  @Html.TextBoxFor(model => model.ClientEmail)
+
+  @Html.LabelFor(model => model.ClientAddress)
+  @Html.TextBoxFor(model => model.ClientAddress)
+
+  @Html.LabelFor(model => model.ClientCity)
+  @Html.TextBoxFor(model => model.ClientCity)
+
+  @Html.LabelFor(model => model.ClientState)
+  @Html.DropDownListFor(model => model.ClientState, 
+    new SelectList(Enum.GetValues(typeof(ClientState))),
+    "Select State")
+
+  @Html.LabelFor(model => model.ClientZip)
+  @Html.TextBoxFor(model => model.ClientZip)
 
   @Html.LabelFor(model => model.Stylist)
   @Html.DropDownList("StylistId")

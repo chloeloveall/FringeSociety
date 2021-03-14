@@ -2,6 +2,7 @@ using HairSalon.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -31,6 +32,7 @@ namespace HairSalon.Controllers
     [HttpPost]
     public ActionResult Create(Client client)
     {
+      string savedType = Enum.GetName(typeof(ClientState),client.ClientState);
       _db.Clients.Add(client);
       _db.SaveChanges();
       return RedirectToAction("Index");

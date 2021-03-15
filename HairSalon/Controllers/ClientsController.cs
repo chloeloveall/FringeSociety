@@ -32,10 +32,20 @@ namespace HairSalon.Controllers
     [HttpPost]
     public ActionResult Create(Client client)
     {
-      string savedType = Enum.GetName(typeof(ClientState),client.ClientState);
-      _db.Clients.Add(client);
-      _db.SaveChanges();
-      return RedirectToAction("Index");
+      if (ModelState.IsValid)
+      {
+        string savedType = Enum.GetName(typeof(ClientState),client.ClientState);
+        _db.Clients.Add(client);
+        _db.SaveChanges();
+        return RedirectToAction("Index");
+      }
+      else if (!ModelState.IsValid)
+      {
+        string savedType = Enum.GetName(typeof(ClientState),client.ClientState);
+        ViewBag.StylistId = new SelectList(_db.Stylists, "StylistId", "StylistName");
+        return View();
+      }
+      return View(client);
     }
 
     public ActionResult Details(int id)
@@ -54,9 +64,18 @@ namespace HairSalon.Controllers
     [HttpPost]
     public ActionResult Edit(Client client)
     {
-      _db.Entry(client).State = EntityState.Modified;
-      _db.SaveChanges();
-      return RedirectToAction("Index");
+      if (ModelState.IsValid)
+      {
+        _db.Entry(client).State = EntityState.Modified;
+        _db.SaveChanges();
+        return RedirectToAction("Index");
+      }
+      else if (!ModelState.IsValid)
+      {
+        ViewBag.StylistId = new SelectList(_db.Stylists, "StylistId", "StylistName");
+        return View();
+      }
+      return View(client);
     }
 
     public ActionResult Delete(int id)

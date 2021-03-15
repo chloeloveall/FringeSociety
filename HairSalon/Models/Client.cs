@@ -6,21 +6,28 @@ namespace HairSalon.Models
   {
     public int ClientId { get; set; }
     [Required]
+    [Display(Name="Name")]
     public string ClientName { get; set; }
     [Required]
     [DataType(DataType.PhoneNumber)]
+    [Display(Name="Phone")]
     [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Not a valid phone number")]
     public string ClientPhone { get; set; }
     [Required]
     [EmailAddress]
+    [Display(Name="Email")]
     public string ClientEmail { get; set; }
     [Required]
+    [Display(Name="Street Address")]
     public string ClientAddress { get; set; }
     [Required]
+    [Display(Name="City")]
     public string ClientCity { get; set; }
     [Required]
+    [Display(Name="State")]
     public ClientState ClientState { get; set; }
     [Required]
+    [Display(Name="Postal Code")]
     public int ClientZip { get; set; }
     public int StylistId { get; set; }
     public virtual Stylist Stylist { get; set; }

@@ -11,30 +11,39 @@
 
 @using (Html.BeginForm())
 {
+  @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
   @Html.HiddenFor(model => model.ClientId)
 
   @Html.LabelFor(model => model.ClientName)
   @Html.EditorFor(model => model.ClientName)
+  @Html.ValidationMessageFor(model => model.ClientName, "", new { @class = "text-danger" })
 
   @Html.LabelFor(model => model.ClientPhone)
   @Html.TextBoxFor(model => model.ClientPhone)
+  @Html.ValidationMessageFor(model => model.ClientPhone, "", new { @class = "text-danger" })
 
   @Html.LabelFor(model => model.ClientEmail)
   @Html.TextBoxFor(model => model.ClientEmail)
+  @Html.ValidationMessageFor(model => model.ClientEmail, "", new { @class = "text-danger" })
 
   @Html.LabelFor(model => model.ClientAddress)
   @Html.TextBoxFor(model => model.ClientAddress)
+  @Html.ValidationMessageFor(model => model.ClientAddress, "", new { @class = "text-danger" })
 
   @Html.LabelFor(model => model.ClientCity)
   @Html.TextBoxFor(model => model.ClientCity)
+  @Html.ValidationMessageFor(model => model.ClientCity, "", new { @class = "text-danger" })
 
   @Html.LabelFor(model => model.ClientState)
   @Html.DropDownListFor(model => model.ClientState, 
     new SelectList(Enum.GetValues(typeof(ClientState))),
     "Select State")
+  @Html.ValidationMessageFor(model => model.ClientState, "", new { @class = "text-danger" })
 
   @Html.LabelFor(model => model.ClientZip)
   @Html.TextBoxFor(model => model.ClientZip)
+  @Html.ValidationMessageFor(model => model.ClientZip, "", new { @class = "text-danger" })
 
   @Html.LabelFor(model => model.Stylist)
   @Html.DropDownList("StylistId")

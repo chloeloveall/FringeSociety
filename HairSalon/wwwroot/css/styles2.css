@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap');
+
+body {
+  min-height: 100%;
+  background-image: url("../img/splash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  letter-spacing: 3px;
+  /* font-size: 1.5em; */
+  font-family: 'Oswald', sans-serif;
+  /* font-family: 'Varela', sans-serif;
+  color: #ffffff;
+  list-style: none; */
+}
+
+.hero-text {
+  border: 2px solid black;
+  /* opacity: 90%; */
+  /* padding: 20px; */
+  background-color: rgba(243, 234, 192, 0.5);
+  /* border-radius: 10px; */
+  text-align: center;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -15%);
+  color: white;
+}
+
+h1, h2 {
+  visibility: hidden;
+}
+
+img {
+  width: 500px;
+  height: auto;
+}
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 15px;
+  left: 30px;
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 15px;
+  right: 30px;
+}
+
+.btn {
+  background: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  color: #6C6C6C;
+  width: 200px;
+  height: 64px;
+  line-height: 50px;
+  transition: all 0.3s;
+  /* span {
+    transition: all 0.3s;
+    tranform: scale(1, 1);
+  } */
+}
+
+.btn::before, .btn::after {
+  content: '';
+  position: absolute;
+  transition: all 0.3s;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.btn-one::before {
+	/* left: 4px; */
+	z-index: 1;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.1);
+  transform: scale(0.1, 1);
+}
+
+.btn-one:hover::before {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+.btn-one::after {
+  transition: all 0.3s;
+  border: 1px solid rgba(108, 108, 108, 0.5);
+}
+
+.btn-one:hover::after {
+  transform: scale(1, .1);
+  opacity: 0;
+}
+
+/* p {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 1);
+  position: relative;
+  padding: 16px 7px;
+  border-top: 2px solid rgba(0, 0, 0, 0);
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+  transition: padding .3s, border .3s;
+}
+
+p:focus, p:hover {
+  padding: 5px 7px;
+  border-color: rgba(0, 0, 0, 1);
+  outline: none;
+}
+
+p::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 0;
+  color: rgba(0, 0, 0, 0);
+  border-left: 2px solid rgba(0, 0, 0, 0);
+  content: attr(data-text);
+  transition: max-height .3s, border 0s;
+}
+
+p::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 5px;
+  max-height: 0;
+  color: rgba(0,0,0,0);
+  border-right: 2px solid rgba(0,0,0,0);
+  content: attr(data-text);
+  transition: max-height .3s,border-color 0s;
+}
+
+p:focus::before, p:hover::before, p:focus::after, p:hover::after {
+  max-height: 100%;
+  transition-delay: .28s;
+  border-color: rgba(0,0,0,1);
+} */

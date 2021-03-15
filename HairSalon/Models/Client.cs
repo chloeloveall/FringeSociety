@@ -1,17 +1,29 @@
 using System;
 using System.Web;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace HairSalon.Models
 {
   public class Client
   {
     public int ClientId { get; set; }
+    [Required]
     public string ClientName { get; set; }
+    [Required]
+    [DataType(DataType.PhoneNumber)]
+    [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Not a valid phone number")]
     public string ClientPhone { get; set; }
+    [Required]
+    [EmailAddress]
     public string ClientEmail { get; set; }
+    [Required]
     public string ClientAddress { get; set; }
+    [Required]
     public string ClientCity { get; set; }
+    [Required]
     public ClientState ClientState { get; set; }
+    [Required]
     public int ClientZip { get; set; }
     public int StylistId { get; set; }
     public virtual Stylist Stylist { get; set; }

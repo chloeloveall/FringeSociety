@@ -1,7 +1,17 @@
 @{
   Layout = "_Layout";
 }
-<h1>Fringe Society: A Subsidiary of Eau Claire Studios</h1>
-<h2>Welcome to the Stylist List!</h2>
-<p>@Html.ActionLink("See all clients", "Index", "Clients")</p> 
-<p>@Html.ActionLink("See all stylists", "Index", "Stylists")</p>
+
+<link rel="stylesheet" href="~/css/styles2.css">
+
+
+<div class="hero-text">
+  <img src="../img/fringe-logo4.png" alt="Fringe Society Logo">
+  <a href='/clients' class="bottom-right btn btn-one" role="button">CLIENT PORTAL</a>
+  <a href='/stylists' class="bottom-left btn btn-one" role="button">STYLIST PORTAL</a>
+  @* <div class="bottom-right btn btn-one">@Html.ActionLink("CLIENT PORTAL", "Index", "Clients")</div>
+  <div class="bottom-left btn btn-one">@Html.ActionLink("STYLIST PORTAL", "Index", "Stylists")</div> *@
+</div>
+
+<h1>Fringe Society</h1>
+<h2>By Eau Claire Studios</h2>

@@ -25,9 +25,9 @@
 6. [User Stories](#user-stories)
 7. [Specifications](#specifications)
 8. [Known Bugs](#known-bugs)
-9. [Roadmap](#roadmap)
-10. [Design](#design)
-11. [Support](#support)
+9. [Issues](#issues)
+10. [Roadmap](#roadmap)
+11. [Design](#design)
 12. [Contributing](#contributing)
 13. [License](#license)
 14. [Acknowledgements](#acknowledgements)
@@ -35,7 +35,7 @@
 
 ## Description
 
-A detailed description 
+An [Epicodus](https://www.epicodus.com/) project to create an MVC web application to help a fictional salon owner manage her employees and their clients. The salon owner can add a list of stylists working at the salon, and for each stylist, add clients who see that stylist. The stylists have specific specialties, so each client can only see a single stylist.
 
 ## Preview
 
@@ -139,15 +139,21 @@ Installing .NET will provide provide access to the C# language
 
 * None at this time
 
+## Issues 
+
+* Report issues [here](https://github.com/chloeloveall/HairSalon.Solution/issues) and select the ```New issue``` button
+for support and
+
 ## Roadmap
 
-future development and rollout 
+* Include a form where employees may search for a stylist by name. Display a list of all results
+* Include a form where employees may also search for a client by name. Display a list of all results
+* Add a feature for adding an appointment to a client
+* Add a feature for adding an appointment to a stylist. Add a check to make sure the stylist does not have any conflicting appointments
+* Add a feature for keeping track of how much each stylist was paid for each appointment
+* Add styling beyond splash page
 
 ### Design
-
-## Support 
-
-for support and issue reporting 
 
 ## Contributing
 
